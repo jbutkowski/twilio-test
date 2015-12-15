@@ -70,22 +70,22 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # Production Mandrill SMTP config
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :address => "smtp.mandrillapp.com",
-    :port => 587,
-    :enable_starttls_auto => true,
-    :user_name => ENV.fetch("MANDRILL_USERNAME"),
-    :password => ENV.fetch("MANDRILL_API_KEY"),
-    :authentication => "login",
-    :domain => "lmit.edu.au"
-  }
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = {
-    host: "lmit.edu.au",
-    protocol: "https"
-  }
-  config.action_mailer.asset_host = "https://lmit.edu.au"
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.smtp_settings = {
+  #   :address => "smtp.mandrillapp.com",
+  #   :port => 587,
+  #   :enable_starttls_auto => true,
+  #   :user_name => ENV.fetch("MANDRILL_USERNAME"),
+  #   :password => ENV.fetch("MANDRILL_API_KEY"),
+  #   :authentication => "login",
+  #   :domain => "lmit.edu.au"
+  # }
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default_url_options = {
+  #   host: "lmit.edu.au",
+  #   protocol: "https"
+  # }
+  # config.action_mailer.asset_host = "https://lmit.edu.au"
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
