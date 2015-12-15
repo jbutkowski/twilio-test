@@ -1,0 +1,38 @@
+<% provide(:title, "Listing subscribers") %>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Phone number</th>
+      <th>Subscribed</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @subscribers.each do |subscriber| %>
+      <tr>
+        <td><%= subscriber.phone_number %></td>
+        <td><%= subscriber.subscribed %></td>
+        <td>
+          <div class="btn-group">
+            <%= link_to subscriber, :class => "btn btn-xs btn-default" do %>
+              <%= fa_icon("eye", :text => "Show") %>
+            <% end %>
+            <%= link_to edit_subscriber_path(subscriber), :class => "btn btn-xs btn-default" do %>
+              <%= fa_icon("pencil", :text => "Edit") %>
+            <% end %>
+            <%= link_to subscriber, :class => "btn btn-xs btn-danger", :method => :delete, :data => { :confirm => "Are you sure you want to delete this subscriber?" } do %>
+              <%= fa_icon("trash-o", :text => "Destroy") %>
+            <% end %>
+          </div>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to new_subscriber_path, :class => "btn btn-default" do %>
+  <%= fa_icon("plus", :text => "New Subscriber") %>
+<% end %>

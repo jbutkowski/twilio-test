@@ -1,0 +1,21 @@
+<% provide(:title) do %>
+  Subscriber #<%= @subscriber.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">Phone number</th>
+      <td><%= @subscriber.phone_number %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Subscribed</th>
+      <td><%= @subscriber.subscribed %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_subscriber_path(@subscriber), :class => "btn btn-primary" %>
+  <%= link_to "Back", subscribers_path, :class => "btn btn-link" %>
+</p>

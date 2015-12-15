@@ -1,0 +1,25 @@
+<% provide(:title) do %>
+  Contact #<%= @contact.id %>
+<% end %>
+
+<table class="table table-bordered">
+  <tbody>
+    <tr>
+      <th class="col-sm-2">Name</th>
+      <td><%= @contact.name %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Mobile</th>
+      <td><%= @contact.mobile %></td>
+    </tr>
+    <tr>
+      <th class="col-sm-2">Email</th>
+      <td><%= @contact.email %></td>
+    </tr>
+  </tbody>
+</table>
+
+<p>
+  <%= link_to "Edit", edit_contact_path(@contact), :class => "btn btn-primary" %>
+  <%= link_to "Back", contacts_path, :class => "btn btn-link" %>
+</p>

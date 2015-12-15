@@ -1,0 +1,11 @@
+<%= bootstrap_form_for(@subscriber) do |f| %>
+
+  <%= f.alert_message "Please review the problems below:" %>
+
+  <%= f.text_field :phone_number %>
+  <%= f.check_box :subscribed %>
+
+  <%= f.primary %>
+  <%= link_to "Back", subscribers_path, :class => "btn btn-link" %>
+
+<% end %>

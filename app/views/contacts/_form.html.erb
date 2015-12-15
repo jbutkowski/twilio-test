@@ -1,0 +1,12 @@
+<%= bootstrap_form_for(@contact) do |f| %>
+
+  <%= f.alert_message "Please review the problems below:" %>
+
+  <%= f.text_field :name %>
+  <%= f.text_field :mobile %>
+  <%= f.text_field :email %>
+
+  <%= f.primary %>
+  <%= link_to "Back", contacts_path, :class => "btn btn-link" %>
+
+<% end %>
